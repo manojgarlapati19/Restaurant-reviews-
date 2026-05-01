@@ -1,0 +1,35 @@
+{
+  "name": "@dishcovery/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "node -e \"require('fs').mkdirSync('.next/types', { recursive: true })\" && next typegen && tsc --noEmit -p tsconfig.json",
+    "test": "node -e \"console.log('No web tests configured yet.')\""
+  },
+  "dependencies": {
+    "@dishcovery/config": "file:../../packages/config",
+    "@dishcovery/types": "file:../../packages/types",
+    "@dishcovery/ui": "file:../../packages/ui",
+    "@hookform/resolvers": "^5.2.2",
+    "@tanstack/react-query": "^5.90.5",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.555.0",
+    "next": "^15.5.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-hook-form": "^7.66.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.4",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18",
+    "typescript": "^5.9.3"
+  }
+}
