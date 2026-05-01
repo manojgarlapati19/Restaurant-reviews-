@@ -1,0 +1,99 @@
+
+> dishcovery-platform@0.1.0 dev
+> concurrently "npm run dev:web" "npm run dev:api" "npm run dev:worker"
+
+[0] 
+[0] > dishcovery-platform@0.1.0 dev:web
+[0] > npm run dev --workspace @dishcovery/web
+[0] 
+[1] 
+[1] > dishcovery-platform@0.1.0 dev:api
+[1] > npm run dev --workspace @dishcovery/api
+[1] 
+[2] 
+[2] > dishcovery-platform@0.1.0 dev:worker
+[2] > npm run dev --workspace @dishcovery/worker
+[2] 
+[0] 
+[0] > @dishcovery/web@0.1.0 dev
+[0] > next dev
+[0] 
+[1] 
+[1] > @dishcovery/api@0.1.0 dev
+[1] > tsx watch src/index.ts
+[1] 
+[2] 
+[2] > @dishcovery/worker@0.1.0 dev
+[2] > tsx watch src/index.ts
+[2] 
+[2] [worker] starting Dishcovery worker loop
+[2] [worker] review-summary demo-review-1: Popular for flavor and value, with occasional complaints around service timing.
+[2] [worker] trust-score demo-review-1: 78
+[2] [worker] demo queues processed
+[0]    ▲ Next.js 15.5.15
+[0]    - Local:        http://localhost:3000
+[0]    - Network:      http://192.168.0.108:3000
+[0] 
+[0]  ✓ Starting...
+[1] (node:24212) [MONGOOSE] Warning: Duplicate schema index on {"reviewId":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[1] (Use `node --trace-warnings ...` to show where the warning was created)
+[0]  ✓ Ready in 2.7s
+[1] Failed to start API MongooseServerSelectionError: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017
+[1]     at _handleConnectionErrors (C:\Users\ttt0022\Downloads\Food Reviews Project\node_modules\mongoose\lib\connection.js:1169:11)
+[1]     at NativeConnection.openUri (C:\Users\ttt0022\Downloads\Food Reviews Project\node_modules\mongoose\lib\connection.js:1100:11)
+[1]     at async connectToDatabase (C:\Users\ttt0022\Downloads\Food Reviews Project\apps\api\src\config\mongo.ts:11:3)
+[1]     at async start (C:\Users\ttt0022\Downloads\Food Reviews Project\apps\api\src\index.ts:6:3) {
+[1]   errorLabelSet: Set(0) {},
+[1]   reason: TopologyDescription {
+[1]     type: 'Unknown',
+[1]     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+[1]     stale: false,
+[1]     compatible: true,
+[1]     heartbeatFrequencyMS: 10000,
+[1]     localThresholdMS: 15,
+[1]     setName: null,
+[1]     maxElectionId: null,
+[1]     maxSetVersion: null,
+[1]     commonWireVersion: 0,
+[1]     logicalSessionTimeoutMinutes: null
+[1]   },
+[1]   code: undefined,
+[1]   cause: TopologyDescription {
+[1]     type: 'Unknown',
+[1]     servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+[1]     stale: false,
+[1]     compatible: true,
+[1]     heartbeatFrequencyMS: 10000,
+[1]     localThresholdMS: 15,
+[1]     setName: null,
+[1]     maxElectionId: null,
+[1]     maxSetVersion: null,
+[1]     commonWireVersion: 0,
+[1]     logicalSessionTimeoutMinutes: null
+[1]   }
+[1] }
+[0]  ○ Compiling / ...
+[0]  ✓ Compiled / in 1629ms (917 modules)
+[0]  GET / 200 in 3053ms
+[0]  GET / 200 in 476ms
+[0]  ○ Compiling /owner/dashboard ...
+[0]  ✓ Compiled /search in 1597ms (927 modules)
+[0]  GET /owner/dashboard 200 in 2248ms
+[0]  GET /search 200 in 1694ms
+[0]  GET / 200 in 1602ms
+[0]  ○ Compiling /admin ...
+[0]  ✓ Compiled /admin in 686ms (929 modules)
+[0]  GET /admin 200 in 825ms
+[0]  GET / 200 in 140ms
+[0]  GET / 200 in 929ms
+[0]  ✓ Compiled in 11.8s (956 modules)
+[0]  ✓ Compiled in 1994ms (967 modules)
+[0]  ✓ Compiled in 1392ms (975 modules)
+[0]  ✓ Compiled in 3.1s (972 modules)
+[0]  ✓ Compiled in 1187ms (986 modules)
+[0]  ✓ Compiled in 1816ms (986 modules)
+[0]  ✓ Compiled in 841ms (597 modules)
+[0]  ✓ Compiled in 2s (986 modules)
+[0]  ✓ Compiled in 340ms (972 modules)
+[0]  ✓ Compiled in 213ms (375 modules)
+[0]  ✓ Compiled in 167ms (375 modules)
